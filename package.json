@@ -1,0 +1,21 @@
+{
+  "name": "bouayadapp_api",
+  "version": "1.0.0",
+  "description": "Bouayadapp database served as a readonly API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moghwan/bouayadapp-api"
+  },
+  "author": "moghwan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "sqlite3": "^5.0.0"
+  }
+}
