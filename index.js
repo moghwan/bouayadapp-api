@@ -1,1 +1,3 @@
-// ohayo!
+/**
+ * /api for endpoints
+ */

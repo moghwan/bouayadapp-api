@@ -1,10 +1,10 @@
 {
-  "name": "bouayadapp_api",
+  "name": "bouayadapp-api",
   "version": "1.0.0",
   "description": "Bouayadapp database served as a readonly API",
   "main": "index.js",
   "scripts": {
-    "start": "node server/",
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,7 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "md5": "^2.3.0",
     "sqlite3": "^5.0.0"
   }
 }
