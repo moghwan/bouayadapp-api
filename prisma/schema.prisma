@@ -1,0 +1,46 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Agenda {
+  id                Int      @default(autoincrement()) @id
+  dayofyear         Int
+  day_name_ar       String
+  day_name_fr       String
+  hij_day_number    Int
+  hij_month_name_ar String
+  hij_month_name_fr String
+  hij_month_number  Int
+  hij_year          Int
+  cr_day_number     Int
+  cr_month_name_ar  String
+  cr_month_name_fr  String
+  cr_month_number   Int
+  cr_year           Int
+  fil_day_number    Int
+  fil_month_name_ar String
+  fil_month_number  Int
+  fil_year          Int
+  town_oujda        Int
+  town_fes          Int
+  town_meknes       Int
+  town_rabat        Int
+  town_casa         Int
+  town_marrakech    Int
+  town_agadir       Int
+  town_laayoune     Int
+  time_fajr         String
+  time_chourouk     String
+  time_dohr         String
+  time_asr          String
+  time_maghreb      String
+  time_isha         String
+  hikma_front       String
+  hikma_back        String
+  is_fav            Int
+}

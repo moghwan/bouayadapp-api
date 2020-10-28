@@ -6,7 +6,7 @@
 // Express server
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 // Database
 const db = require("../database")
@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
   res.send('Test allah')
 })
 
-app.listen(port, () => {
-  console.log(`check => http://localhost:${port}/api/agenda`)
+app.listen(PORT, () => {
+  console.log(`check => http://localhost:${PORT}/api/agenda`)
 })
 
 app.get("/api/agenda/:day-:month-:year", (req, res, next) => {
