@@ -1,3 +1,0 @@
-/**
- * /api for endpoints
- */
