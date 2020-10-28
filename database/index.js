@@ -9,23 +9,3 @@ module.exports = db = new sqlite3.Database(DBSOURCE, (err) => {
         console.log('Connected to the SQLite database.') 
     }
 });
-
-// export function getData(day, month, year) {
-//     let params = [
-//         day,
-//         month,
-//         year
-//     ]
-
-//     db.get(query, params, (err, row) => {
-//         if (err) {
-//             return {
-//                 "error": err.message
-//             }
-//         }
-//         return {
-//             "message": "success",
-//             "data": row
-//         }
-//     });
-// }

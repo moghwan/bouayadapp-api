@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    res.json({
+    res.send({
         "endpoints": [
             {
                 "id": 1,

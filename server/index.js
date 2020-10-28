@@ -15,13 +15,26 @@ const query = "SELECT * FROM `agenda` where `cr_day_number` like ? and `cr_month
 // Today's date
 const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'numeric', day: 'numeric' }) 
 const [{ value: month },,{ value: day },,{ value: year }] = dateTimeFormat.formatToParts(new Date()) 
+const endpoints = {
+  "endpoints": [
+      {
+          "id": 1,
+          "name": "/api/agenda",
+          "description": "Get today's date data"
+      },
+      {
+          "id": 2,
+          "name": "/api/agenda/:day-:month-:year",
+          "description": "Get specific data for a given date"
+      },
+  ]
+}
 
-app.get('/', (req, res) => {
-  res.send('Test allah')
-})
+app.get('/', (req, res) => res.json(endpoints))
+app.get('/api', (req, res) => res.json(endpoints))
 
 app.listen(PORT, () => {
-  console.log(`check => http://localhost:${PORT}/api/agenda`)
+  console.log(`check => http://localhost:${PORT} for api endpoints`)
 })
 
 app.get("/api/agenda/:day-:month-:year", (req, res, next) => {
